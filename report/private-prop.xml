@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<phpbench xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.4.1">
+  <suite tag="" context="" date="2025-08-30T16:10:52+00:00" config-path="/home/maks/Learning/php/privat-prop-bench/phpbench.json" uuid="13500ce96bdd9c7d46606312c48ff8b93115f9e6">
+    <env>
+      <uname>
+        <value name="os" type="string">Linux</value>
+        <value name="host" type="string">maks-Lenovo-Legion-5-15IMH05</value>
+        <value name="release" type="string">6.5.0-41-generic</value>
+        <value name="version" type="string">#41~22.04.2-Ubuntu SMP PREEMPT_DYNAMIC Mon Jun  3 11:32:55 UTC 2</value>
+        <value name="machine" type="string">x86_64</value>
+      </uname>
+      <php>
+        <value name="xdebug" type="boolean"></value>
+        <value name="version" type="string">8.3.19</value>
+        <value name="ini" type="string">/etc/php/8.3/cli/php.ini</value>
+        <value name="extensions" type="string">Core, date, libxml, openssl, pcre, zlib, filter, hash, json, pcntl, random, Reflection, SPL, session, standard, sodium, PDO, xml, bcmath, bz2, calendar, ctype, curl, dom, mbstring, FFI, fileinfo, ftp, gd, gettext, iconv, imap, intl, exif, pdo_pgsql, pdo_sqlite, pgsql, Phar, posix, readline, shmop, SimpleXML, soap, sockets, sqlite3, sysvmsg, sysvsem, sysvshm, tokenizer, xmlreader, xmlwriter, xsl, Zend OPcache</value>
+      </php>
+      <opcache>
+        <value name="extension_loaded" type="boolean">1</value>
+        <value name="enabled" type="boolean"></value>
+      </opcache>
+      <unix-sysload>
+        <value name="l1" type="double">0.69140625</value>
+        <value name="l5" type="double">0.794921875</value>
+        <value name="l15" type="double">0.89990234375</value>
+      </unix-sysload>
+      <vcs>
+        <value name="system" type="string">git</value>
+        <value name="branch" type="string">main</value>
+        <value name="version" type="string">877f9043daf049f5f8b17f01b0553ccf7cb707a1</value>
+      </vcs>
+      <sampler>
+        <value name="nothing" type="double">0.0061988830566406</value>
+        <value name="md5" type="double">0.11277198791504</value>
+        <value name="file_rw" type="double">1.3480186462402</value>
+      </sampler>
+    </env>
+    <benchmark class="\MindPolaris\Benchmark\Test\PrivatePropBench">
+      <subject name="benchClosure">
+        <executor name="remote">
+          <parameter name="php_config" type="collection"/>
+          <parameter name="safe_parameters" value="1" type="boolean"/>
+          <parameter name="executor" value="remote" type="string"/>
+        </executor>
+        <variant sleep="0" output-time-unit="microseconds" output-time-precision="" output-mode="time" revs="10000" warmup="0" retry-threshold="2">
+          <parameter-set name=""/>
+          <iteration time-net="10895" time-revs="10000" time-avg="1.0895" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-1.13675907896" comp-deviation="-1.4499832659449"/>
+          <iteration time-net="11234" time-revs="10000" time-avg="1.1234" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="1.267241718092" comp-deviation="1.6164192740134"/>
+          <iteration time-net="11208" time-revs="10000" time-avg="1.1208" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="1.0828640758403" comp-deviation="1.3812379582644"/>
+          <iteration time-net="11235" time-revs="10000" time-avg="1.1235" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="1.274333165871" comp-deviation="1.6254647092345"/>
+          <iteration time-net="11032" time-revs="10000" time-avg="1.1032" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-0.16523073324872" comp-deviation="-0.21075864065201"/>
+          <iteration time-net="11147" time-revs="10000" time-avg="1.1147" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="0.65028576132647" comp-deviation="0.8294664097763" reject-count="8"/>
+          <iteration time-net="10899" time-revs="10000" time-avg="1.0899" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-1.1083932878444" comp-deviation="-1.4138015250604"/>
+          <iteration time-net="10904" time-revs="10000" time-avg="1.0904" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-1.0729360489498" comp-deviation="-1.3685743489548"/>
+          <iteration time-net="11107" time-revs="10000" time-avg="1.1107" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="0.36662785016988" comp-deviation="0.46764900093167" reject-count="4"/>
+          <iteration time-net="10892" time-revs="10000" time-avg="1.0892" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-1.1580334222968" comp-deviation="-1.4771195716082" reject-count="3"/>
+          <stats max="1.1235" mean="1.10553" min="1.0892" mode="1.1170561643836" rstdev="1.2755413990371" stdev="0.014101492828775" sum="11.0553" variance="0.0001988521"/>
+        </variant>
+      </subject>
+      <subject name="benchReflection">
+        <executor name="remote">
+          <parameter name="php_config" type="collection"/>
+          <parameter name="safe_parameters" value="1" type="boolean"/>
+          <parameter name="executor" value="remote" type="string"/>
+        </executor>
+        <variant sleep="0" output-time-unit="microseconds" output-time-precision="" output-mode="time" revs="10000" warmup="0" retry-threshold="2">
+          <parameter-set name=""/>
+          <iteration time-net="11539" time-revs="10000" time-avg="1.1539" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="1.1758512895225" comp-deviation="1.2397238039254"/>
+          <iteration time-net="11370" time-revs="10000" time-avg="1.137" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-0.23051012540532" comp-deviation="-0.24303148880914"/>
+          <iteration time-net="11195" time-revs="10000" time-avg="1.1195" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-1.6868015313957" comp-deviation="-1.7784289812857"/>
+          <iteration time-net="11541" time-revs="10000" time-avg="1.1541" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="1.1924946198767" comp-deviation="1.2572712038394"/>
+          <iteration time-net="11425" time-revs="10000" time-avg="1.1425" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="0.2271814593345" comp-deviation="0.23952200882635"/>
+          <iteration time-net="11470" time-revs="10000" time-avg="1.147" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="0.60165639230345" comp-deviation="0.63433850689175"/>
+          <iteration time-net="11528" time-revs="10000" time-avg="1.1528" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="1.0843129725745" comp-deviation="1.1432131043983" reject-count="7"/>
+          <iteration time-net="11215" time-revs="10000" time-avg="1.1215" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-1.5203682278539" comp-deviation="-1.6029549821455" reject-count="4"/>
+          <iteration time-net="11330" time-revs="10000" time-avg="1.133" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-0.56337673248883" comp-deviation="-0.5939794870895" reject-count="4"/>
+          <iteration time-net="11364" time-revs="10000" time-avg="1.1364" mem-peak="718192" mem-real="2097152" mem-final="509936" comp-z-value="-0.28044011646784" comp-deviation="-0.29567368855119" reject-count="4"/>
+          <stats max="1.1541" mean="1.13977" min="1.1195" mode="1.1448913894324" rstdev="1.0543202316245" stdev="0.012016825703987" sum="11.3977" variance="0.0001444041"/>
+        </variant>
+      </subject>
+    </benchmark>
+    <result key="time" class="PhpBench\Model\Result\TimeResult"/>
+    <result key="mem" class="PhpBench\Model\Result\MemoryResult"/>
+    <result key="comp" class="PhpBench\Model\Result\ComputedResult"/>
+    <result key="reject" class="PhpBench\Model\Result\RejectionCountResult"/>
+  </suite>
+</phpbench>

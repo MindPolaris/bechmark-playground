@@ -1,0 +1,23 @@
+{
+    "name": "mind-polaris/private-props-bench",
+    "description": "Benchmarking playground",
+    "type": "project",
+    "require": {
+        "php": ">=8.3"
+    },
+    "require-dev": {
+        "phpbench/phpbench": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MindPolaris\\Benchmark\\": "src/",
+            "MindPolaris\\Benchmark\\Test\\": "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maksym Haiduk",
+            "email": "maksym.haiduk@paysera.net"
+        }
+    ]
+}
